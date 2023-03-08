@@ -1,0 +1,68 @@
+2. Polecenie ipconfig
+	
+	Polecenie domyślnie przedstawia tylko adresy IP,
+	maski podsieci i bramki domyślne każdego adaptera 
+	związanego z TCP/IP.
+	
+	Adres IPv4 wewnętrzny . . . . . : 192.168.13.23
+	Adres IPv4 zewnętrzny . . . . . : 213.184.8.154
+
+3. speedtest.net
+
+	Strona do badania prędkości połączenia (ping, pobierania/wysyłania)
+	między wybranym serwerem.
+	
+4. Polecenie ping
+
+	Polecenie służące do diagnozowania połączeń sieciowych.
+  
+  > ping riot.de
+  Pinging riot.de [95.143.172.11] with 32 bytes of data:
+  Reply from 95.143.172.11: bytes=32 time=32ms TTL=55
+  Reply from 95.143.172.11: bytes=32 time=31ms TTL=55
+  Reply from 95.143.172.11: bytes=32 time=32ms TTL=55
+  Reply from 95.143.172.11: bytes=32 time=31ms TTL=55
+
+  Ping statistics for 95.143.172.11:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 31ms, Maximum = 32ms, Average = 31ms
+
+5. Polecenie tracert
+  
+  Polecenie wyświetla trasę potrzebną do pokonania, aby dostać się do dowolnego hosta w internecie.
+  
+  > tracert riot.de
+  Tracing route to riot.de [95.143.172.11]
+  over a maximum of 30 hops:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.13.1
+  2    39 ms     3 ms    <1 ms  213.184.8.1
+  3     1 ms     1 ms     1 ms  10.1.3.1
+  4     1 ms     1 ms     1 ms  10.1.1.194
+  5     2 ms     2 ms     2 ms  com-gw1_eman-core.man.olsztyn.pl [213.184.16.54]
+  6    15 ms    12 ms    12 ms  z-Olsztyn-COM.poznan-gw2-amsix.rtr.pionier.gov.pl [212.191.237.81]
+  7    41 ms    32 ms    31 ms  ipv4.de-cix.fra.de.as25560.rh-tec.de [80.81.193.106]
+  8     *        *        *     Request timed out.
+  9    32 ms    32 ms    32 ms  juliet.uberspace.de [95.143.172.11]
+  
+  Trace complete.
+  
+8. zawartość folderu system32/drivers/etc
+
+	hosts - plik zawierający mapowanie nazw hostów na adresy IP. 
+	Wspomaga adresowanie w sieciach komputerowych, tłumaczy nazwy 
+	hostów na ich numeryczne odpowiedniki (czyli właśnie adresy IP). 
+	
+	services - plik zawierający dobrze znane numery portów
+	zdefiniowane przez IANA.
+	
+	networks - plik zawierający nazwę sieci oraz numer map sieci 
+	dla sieci lokalnych.
+	
+	protocol - plik zawierający internetowe protokoły zdefiniowane
+	przez IANA.
+	
+	lmhosts.sam - plik zawierający mapowania nazw Samba NetBIOS 
+	na adresy IP.
+	
